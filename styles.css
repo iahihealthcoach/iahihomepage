@@ -230,8 +230,8 @@ h1 {
 .hero-card, .card, .contact-box, .info-strip {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(20, 102, 66, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 26px rgba(10, 25, 41, 0.07);
 }
 
 .hero-card {
@@ -307,8 +307,9 @@ h1 {
   padding: 1.4rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: 0 12px 28px rgba(15, 122, 122, 0.08);
+  border-top: 3px solid var(--gold);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px rgba(10, 25, 41, 0.06);
 }
 
 .feature-card h3 {
@@ -396,8 +397,8 @@ h1 {
   align-self: flex-start;
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
-  background: rgba(27, 152, 209, 0.12);
-  color: var(--primary-dark);
+  background: var(--gold-soft);
+  color: var(--gold-dark);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -411,9 +412,10 @@ h1 {
 .pill-item {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1rem;
+  border-left: 3px solid var(--gold);
+  border-radius: 0.65rem;
   padding: 1.15rem 1.2rem;
-  box-shadow: 0 8px 20px rgba(20, 102, 66, 0.05);
+  box-shadow: 0 8px 18px rgba(10, 25, 41, 0.05);
 }
 
 .pill-item strong {

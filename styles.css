@@ -212,6 +212,33 @@ h1 {
   background: #f2fbf9;
 }
 
+.section-feature {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.feature-card {
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(15, 122, 122, 0.08);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+}
+
+.feature-card p {
+  color: var(--muted);
+}
+
 .section-heading {
   margin-bottom: 1.5rem;
 }
@@ -337,7 +364,8 @@ h1 {
   .hero-grid,
   .grid-2,
   .card-grid,
-  .pill-list {
+  .pill-list,
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 

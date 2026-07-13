@@ -52,6 +52,21 @@ const valueStack = [
   { title: '자료보관 / PDF 발급', body: '수료증, 자격증, 학습자료, PDF 다운로드를 제공할 수 있는 자료 보관 및 인증 시스템입니다.' }
 ];
 
+const features = [
+  {
+    title: '전문가 교육 설계',
+    body: '건강코치 실무 역량을 중심으로 설계된 커리큘럼으로, 현장 적용 가능한 교육 체계를 제공합니다.'
+  },
+  {
+    title: '자격 인증 연계',
+    body: '교육 이수 후 자격 검증과 발급까지 이어지는 구조로 학습 성과와 신뢰성을 확보합니다.'
+  },
+  {
+    title: '회원 중심 네트워크',
+    body: '협회 회원 간 정보 공유와 교육 참여를 활성화하여 지속적인 전문성 성장을 지원합니다.'
+  }
+];
+
 function renderContent() {
   const brandName = document.querySelector('[data-role="brand-name"]');
   const brandBadge = document.querySelector('[data-role="brand-badge"]');
@@ -109,6 +124,21 @@ function renderContent() {
       )
       .join('');
   }
+
+  const featureCards = document.getElementById('featureCards');
+  if (featureCards) {
+    featureCards.innerHTML = features
+      .map(
+        (item) => `
+          <article class="feature-card">
+            <h3>${item.title}</h3>
+            <p>${item.body}</p>
+          </article>
+        `
+      )
+      .join('');
+  }
+
   if (contactDescription) contactDescription.textContent = site.contactDescription;
   if (footerTitle) footerTitle.textContent = site.brandName;
   if (footerEmail) footerEmail.textContent = site.footerEmail;
@@ -119,7 +149,9 @@ const nav = document.querySelector('.site-nav');
 
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.textContent = isOpen ? '✕' : '☰';
   });
 }
 

@@ -67,6 +67,21 @@ const features = [
   }
 ];
 
+const caseStudies = [
+  {
+    title: '전문가 회의 기반 교육 기획',
+    body: '협회 전문가들이 모여 실제 건강코치 현장을 분석하고 교육 커리큘럼을 설계하는 회의를 정기적으로 진행합니다.'
+  },
+  {
+    title: '현장 적용형 교육 운영',
+    body: '실제 사례 중심의 실습과 평가를 통해 교육생들이 전문 건강코치로서 현업에 바로 투입될 수 있도록 준비합니다.'
+  },
+  {
+    title: '협회 실제 사례 공유',
+    body: '회원 활동 사례와 인증 과정, 교육 성과를 협회 네트워크에서 공유하여 지속 가능한 성장 기반을 마련합니다.'
+  }
+];
+
 function renderContent() {
   const brandName = document.querySelector('[data-role="brand-name"]');
   const brandBadge = document.querySelector('[data-role="brand-badge"]');
@@ -131,6 +146,20 @@ function renderContent() {
       .map(
         (item) => `
           <article class="feature-card">
+            <h3>${item.title}</h3>
+            <p>${item.body}</p>
+          </article>
+        `
+      )
+      .join('');
+  }
+
+  const caseCards = document.getElementById('caseCards');
+  if (caseCards) {
+    caseCards.innerHTML = caseStudies
+      .map(
+        (item) => `
+          <article class="case-card">
             <h3>${item.title}</h3>
             <p>${item.body}</p>
           </article>

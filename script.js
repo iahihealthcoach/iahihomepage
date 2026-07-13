@@ -163,7 +163,7 @@ function renderContent() {
       .map(
         (item) => `
           <article class="case-card">
-            <img class="case-card-image" src="${item.image}" alt="${item.title}" loading="lazy" />
+            <img class="case-card-image" src="${item.image}" alt="" loading="lazy" />
             <div class="case-card-body">
               <h3>${item.title}</h3>
               <p>${item.body}</p>

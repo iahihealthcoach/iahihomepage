@@ -69,30 +69,10 @@ img {
 }
 
 .brand-logo {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   display: block;
-}
-
-.brand-copy {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  color: white;
-  font-weight: 900;
-  letter-spacing: 0.04em;
   flex-shrink: 0;
-  box-shadow: 0 6px 16px rgba(15, 122, 122, 0.2);
 }
 
 .site-nav {
